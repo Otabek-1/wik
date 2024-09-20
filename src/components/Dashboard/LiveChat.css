@@ -1,54 +1,87 @@
 .live-chat {
-    width: 350px; /* Chatning kengligi */
-    height: 90%; /* Chat balandligi */
-    background: white; /* Fon rangi */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Soya */
-    position: fixed; /* Joylashuvni belgilash */
-    left: 20px; /* Chap tomonda joylashishi */
-    top: 5%; /* Yuqoridan 5% masofa */
-    border-radius: 8px; /* Burchaklarini yumshatish */
+    width: 350px; /* Chat box width */
+    height: 90%; /* Chat box height */
+    background: #2c2c2c; /* Dark background */
+    color: white; /* Text color for better contrast on dark background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Darker box shadow for depth */
+    position: fixed; /* Fix position on the page */
+    left: 20px; /* Distance from the left side */
+    top: 1%; /* Distance from the top */
+    border-radius: 8px; /* Rounded corners */
     display: flex;
-    flex-direction: column; /* Xabarlar va inputni pastdan yuqoriga joylash */
+    flex-direction: column; /* Stack messages and input vertically */
+    padding: 10px;
+}
+
+.open-close-button{
+    position: absolute;
+    top:45%;
+    right: -50px;
+    width: 50px;
+    height: 55px;
+    background: white;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    
+}
+
+.live-chat::-webkit-scrollbar{
+    width: 10px;
+    background: gray;
 }
 
 .messages {
-    flex: 1; /* Xabarlar maydoni uchun joy */
-    padding: 10px; /* Ichki joy */
-    overflow-y: auto; /* Oqimdan tashqariga chiqishni oldini olish */
+    flex: 1; /* Allow the messages area to take available space */
+    padding: 10px; /* Padding around messages */
+    overflow-y: auto; /* Allow scrolling if messages overflow */
 }
 
 .message {
-    padding: 8px; /* Xabar ichki joyi */
-    margin: 5px 0; /* Xabarlar orasidagi masofa */
-    border-radius: 5px; /* Xabar burchaklari */
-    background-color: #f1f1f1; /* Xabar rangi */
-    max-width: 80%; /* Xabar kengligi */
+    padding: 8px; /* Inner padding for messages */
+    margin: 5px 0; /* Spacing between messages */
+    border-radius: 5px; /* Rounded message corners */
+    background-color: #444444; /* Darker message background */
+    color: #e0e0e0; /* Lighter text color for contrast */
+    max-width: 80%; /* Maximum width of a message bubble */
 }
 
 .chat-input {
     display: flex;
-    margin-top: 10px; /* Input va tugma orasidagi masofa */
-    border-top: 1px solid #ccc; /* Yuqoridan chegara */
-    padding-top: 10px; /* Yuqoridan ichki joy */
+    margin-top: 10px; /* Margin between messages area and input box */
+    border-top: 1px solid #666666; /* Dark top border for separation */
+    padding-top: 10px; /* Padding inside the top of the input area */
+    height: max-content;
+    row-gap: 10px;
+    padding-bottom: 15px;
 }
 
 .chat-input input {
-    flex: 1; /* Kengligi */
-    padding: 10px; /* Ichki joy */
-    border: 1px solid #ccc; /* Chegara */
-    border-radius: 5px; /* Burchaklari */
+    width: 100%;
+    padding: 10px; /* Padding inside the input field */
+    border: 1px solid #666666; /* Darker border for input */
+    background-color: #3c3c3c; /* Dark background for input */
+    color: #e0e0e0; /* Lighter text color */
+    border-radius: 5px; /* Rounded corners for input */
 }
 
 .chat-input button {
-    padding: 10px; /* Ichki joy */
-    border: none; /* Chegarasiz */
-    background-color: #4CAF50; /* Tugma rangi */
-    color: white; /* Matn rangi */
-    border-radius: 5px; /* Burchaklari */
-    cursor: pointer; /* Ko‘rsatkich o‘zgarishi */
-    margin-left: 5px; /* Input va tugma orasidagi masofa */
+    padding: 10px; /* Padding for the button */
+    border: none; /* No border */
+    background-color: #5cba47; /* Dark green button background color */
+    color: white; /* Button text color */
+    border-radius: 5px; /* Rounded corners for button */
+    cursor: pointer; /* Show pointer cursor when hovering over the button */
+    margin-left: 5px; /* Space between input and button */
+    width: 100%;
 }
 
 .chat-input button:hover {
-    background-color: #45a049; /* Tugma rangini o‘zgartirish hoverda */
+    background-color: #49923b; /* Change button color on hover */
 }

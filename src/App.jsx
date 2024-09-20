@@ -28,9 +28,11 @@ const App = () => {
 
     return (
         <div className='login-box' style={{ width: "400px", height: "500px", borderRadius: "20px", position: "relative", display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0px 0px 5px black" }}>
+            
             <span className='login-header-text animated-text' style={{ position: "absolute", top: "-150px", fontFamily: "Roboto", fontSize: "120px", fontWeight: "900" }}>WIK</span>
             <h3 className="login-text text-light" style={{ position: "absolute", top: "30px", fontSize: "40px" }}>Login</h3>
             <form onSubmit={handleSubmit}>
+
                 <div className="uname-input">
                     <label htmlFor="uname">U-name</label>
                     <input 
