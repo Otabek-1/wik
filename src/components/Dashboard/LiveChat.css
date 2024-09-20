@@ -1,0 +1,54 @@
+.live-chat {
+    width: 350px; /* Chatning kengligi */
+    height: 90%; /* Chat balandligi */
+    background: white; /* Fon rangi */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Soya */
+    position: fixed; /* Joylashuvni belgilash */
+    left: 20px; /* Chap tomonda joylashishi */
+    top: 5%; /* Yuqoridan 5% masofa */
+    border-radius: 8px; /* Burchaklarini yumshatish */
+    display: flex;
+    flex-direction: column; /* Xabarlar va inputni pastdan yuqoriga joylash */
+}
+
+.messages {
+    flex: 1; /* Xabarlar maydoni uchun joy */
+    padding: 10px; /* Ichki joy */
+    overflow-y: auto; /* Oqimdan tashqariga chiqishni oldini olish */
+}
+
+.message {
+    padding: 8px; /* Xabar ichki joyi */
+    margin: 5px 0; /* Xabarlar orasidagi masofa */
+    border-radius: 5px; /* Xabar burchaklari */
+    background-color: #f1f1f1; /* Xabar rangi */
+    max-width: 80%; /* Xabar kengligi */
+}
+
+.chat-input {
+    display: flex;
+    margin-top: 10px; /* Input va tugma orasidagi masofa */
+    border-top: 1px solid #ccc; /* Yuqoridan chegara */
+    padding-top: 10px; /* Yuqoridan ichki joy */
+}
+
+.chat-input input {
+    flex: 1; /* Kengligi */
+    padding: 10px; /* Ichki joy */
+    border: 1px solid #ccc; /* Chegara */
+    border-radius: 5px; /* Burchaklari */
+}
+
+.chat-input button {
+    padding: 10px; /* Ichki joy */
+    border: none; /* Chegarasiz */
+    background-color: #4CAF50; /* Tugma rangi */
+    color: white; /* Matn rangi */
+    border-radius: 5px; /* Burchaklari */
+    cursor: pointer; /* Ko‘rsatkich o‘zgarishi */
+    margin-left: 5px; /* Input va tugma orasidagi masofa */
+}
+
+.chat-input button:hover {
+    background-color: #45a049; /* Tugma rangini o‘zgartirish hoverda */
+}
