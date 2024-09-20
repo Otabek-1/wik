@@ -1,0 +1,97 @@
+.animated-text {
+    font-size: 100px;
+    font-weight: bold;
+    color: transparent;
+    text-shadow: 2px 2px 5px purple, 
+                 -2px -2px 5px blue, 
+                 2px -2px 5px black;
+    animation:  shadowAnimation 2s infinite;
+}
+
+@keyframes shadowAnimation {
+    0% {
+        text-shadow: 2px 2px 5px purple, 
+                     -2px -2px 5px blue, 
+                     2px -2px 5px black;
+    }
+    33% {
+        text-shadow: 2px 2px 5px blue, 
+                     -2px -2px 5px black, 
+                     2px -2px 5px purple;
+    }
+    66% {
+        text-shadow: 2px 2px 5px black, 
+                     -2px -2px 5px purple, 
+                     2px -2px 5px blue;
+    }
+    100% {
+        text-shadow: 2px 2px 5px purple, 
+                     -2px -2px 5px blue, 
+                     2px -2px 5px black;
+    }
+}
+
+
+
+form{
+    height: 350px;
+    width: 100%;
+    padding: 0px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    transform: translateY(10px);
+}
+
+.uname-input{
+    display: flex;
+    flex-direction: column;
+    width: 97%;
+    row-gap: 6px;
+    margin: 20px 0px;
+}
+
+.uname-input label{
+    color: white;
+    font-size: 20px;
+}
+
+.uname-input input{
+    background: none;
+    border: unset;
+    outline: none;
+    border-bottom: 1px solid white;
+    color:white;
+}
+
+.uname-input input::placeholder{
+    color: rgb(175, 173, 173)
+}
+
+.login-box{
+    background: linear-gradient(45deg, purple, blue, black);
+}
+
+input[type="submit"] {
+    background: linear-gradient(45deg, purple, blue); /* Gradient fon */
+    color: white; /* Matn rangi */
+    padding: 15px 32px; /* Ichki joy */
+    text-align: center; /* Markazda joylashishi */
+    text-decoration: none; /* Ostki chiziq yo‘q */
+    display: inline-block; /* Inline element */
+    font-size: 16px; /* Matn o‘lchami */
+    margin: 20px 0; /* Tashqi joy */
+    cursor: pointer; /* Ko‘rsatkich o‘zgarishi */
+    border: none; /* Chegarasi yo‘q */
+    border-radius: 12px; /* Burchaklarini yumshatish */
+    transition: background-color 0.3s, transform 0.3s; /* O‘zgarish vaqtini aniqlash */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soyali effekt */
+}
+
+input[type="submit"]:hover {
+    background: linear-gradient(45deg, blue, purple); /* Hover paytida rang o‘zgarishi */
+    transform: scale(1.05); /* Kichik o‘lchov o‘zgarishi */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Hover paytida soyali effekt kuchayishi */
+    font-size: 20px;
+}
