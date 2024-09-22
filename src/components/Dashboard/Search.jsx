@@ -10,7 +10,7 @@ export default function Search() {
     function getSearchResult() {
         setResults([]);
         seterror404("");
-        axios.post("http://localhost:4000/search", { text: searchText }) 
+        axios.post("https://wik-backend.onrender.com/search", { text: searchText }) 
             .then(res => {
                 setResults(res.data);
             })

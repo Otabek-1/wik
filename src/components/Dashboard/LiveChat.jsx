@@ -10,7 +10,7 @@ const LiveChat = () => {
 
     // Fetch messages from server
     const fetchMessages = async () => {
-        const response = await fetch('http://localhost:4000/messages');
+        const response = await fetch('https://wik-backend.onrender.com/messages');
         const data = await response.json();
         setMessages(data);
     };
@@ -26,7 +26,7 @@ const LiveChat = () => {
     const handleSendMessage = async (e) => {
         e.preventDefault();
         if (inputValue.trim() && username) {
-            await fetch('http://localhost:4000/message', {
+            await fetch('https://wik-backend.onrender.com/message', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
