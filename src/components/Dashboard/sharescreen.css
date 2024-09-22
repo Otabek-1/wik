@@ -1,0 +1,17 @@
+.screens{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -800px;
+    gap: 20px;
+}
+
+.screen{
+    width: 600px;
+    height: 400px;
+    background: black;
+    border-radius: 10px;
+}

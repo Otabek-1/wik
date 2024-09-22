@@ -1,15 +1,20 @@
 import React from 'react';
-import LiveChat from './LiveChat'; 
+import LiveChat from './LiveChat';
 import "./Dashboad.css";
+import Search from './Search';
+import ShareScreen from './ShareScreen';
 
 const Dashboard = () => {
     return (
-        <div style={{ width: "100%", height: "100vh", background: "gray", display: "flex" }}>
-            <LiveChat /> {/* Live chat on the left side */}
-            <div style={{ flex: 1, padding: "20px" }}>
-                {/* Dashboard main content goes here */}
-            </div>
+
+        <div style={{ width: "100%", height: "100vh", background: "gray", display: "flex", justifyContent: "end" }}>
+            <LiveChat />
+            <Search />
+
+
+
         </div>
+
     );
 }
 

@@ -13,7 +13,7 @@ const App = () => {
         event.preventDefault();
     
         try {
-            const response = await axios.post("http://localhost:4000/login", {
+            const response = await axios.post("https://wik-backend.onrender.com/login", {
                 uname,
                 password: psw
             });
