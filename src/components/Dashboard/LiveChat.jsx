@@ -81,8 +81,9 @@ const LiveChat = () => {
                         onChange={(e) => setInputValue(e.target.value)}
                         placeholder="Type a message..."
                     />
-                    <div className="buttons d-flex" style={{ "justifyContent": "start" }}>
+                    <div className="buttons d-flex" style={{ "justifyContent": "start" ,"columnGap":"10px"}}>
                         <button type="submit">Send</button>
+                        {/* <a className='btn btn-primary' style={{"width":"200px"}}>View book</a> */}
                         {/* <button type="button" className='btn bg-danger sos-btn' onClick={handleSosClick}>SOS</button> */}
                     </div>
                 </form>
