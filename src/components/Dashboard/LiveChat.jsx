@@ -8,6 +8,11 @@ const LiveChat = () => {
     const [modaltop, setModaltop] = useState("20px");
     const [sosVisible, setSosVisible] = useState(false); // State for SOS modal
 
+    const colors = ["blue","white","red","green","yellow","magenta","cyan"];
+    const handleRightClick = () =>{
+        alert("Right Click")
+    }
+
     // Fetch messages from server
     const fetchMessages = async () => {
         const response = await fetch('https://wik-backend.onrender.com/messages');
@@ -68,8 +73,8 @@ const LiveChat = () => {
                 <h3>Live Chat</h3>
                 <div className="messages">
                     {messages.map((msgObj, index) => (
-                        <div key={index}>
-                            <span className="username">{msgObj.from}: </span>
+                        <div key={index} onContextMenu={handleRightClick}>
+                            <span className="username" style={{"color":`${colors[Math.random()*colors.length]}`}}>{msgObj.from}: </span>
                             <div className="message">{msgObj.body}</div>
                         </div>
                     ))}
