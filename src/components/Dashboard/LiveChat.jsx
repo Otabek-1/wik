@@ -74,7 +74,7 @@ const LiveChat = () => {
                 <div className="messages">
                     {messages.map((msgObj, index) => (
                         <div key={index} onContextMenu={handleRightClick}>
-                            <span className="username" style={{"color":`${colors[Math.random()*colors.length]}`}}>{msgObj.from}: </span>
+                            <span className="username" /*style={{"color":`${colors[Math.floor(Math.random()*colors.length)]}`}}*/ >{msgObj.from}: </span>
                             <div className="message">{msgObj.body}</div>
                         </div>
                     ))}
