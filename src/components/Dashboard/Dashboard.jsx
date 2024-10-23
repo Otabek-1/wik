@@ -10,9 +10,6 @@ const Dashboard = () => {
         <div style={{ width: "100%", height: "150vh", background: "gray", display: "flex", justifyContent: "end" }}>
             <LiveChat />
             <Search />
-
-
-
         </div>
 
     );
