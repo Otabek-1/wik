@@ -7,7 +7,7 @@ import ShareScreen from './ShareScreen';
 const Dashboard = () => {
     return (
 
-        <div style={{ width: "100%", height: "100vh", background: "gray", display: "flex", justifyContent: "end" }}>
+        <div style={{ width: "100%", height: "150vh", background: "gray", display: "flex", justifyContent: "end" }}>
             <LiveChat />
             <Search />
 
