@@ -7,7 +7,7 @@
 
 # testing
 /coverage
-
+/fontawesome-free-6.6.0-web
 # production
 /build
 
