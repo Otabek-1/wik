@@ -1,7 +1,5 @@
 body{
-    background: linear-gradient(60deg, purple, blue,black);   
+    /* background: linear-gradient(60deg, purple, blue,black);    */
+    background: rgb(230,230,230);
 }
 
-#root{
-    background: rgba(0, 0, 0, 0.411);
-}

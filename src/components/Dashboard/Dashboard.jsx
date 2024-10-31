@@ -1,15 +1,15 @@
 import React from 'react';
-import LiveChat from './LiveChat';
-import "./Dashboad.css";
-import Search from './Search';
-import ShareScreen from './ShareScreen';
+import "./Main.css";
+import Globals from './Globals';
+import Mainchat from './Mainchat';
+
 
 const Dashboard = () => {
     return (
 
-        <div style={{ width: "100%", height: "150vh", background: "gray", display: "flex", justifyContent: "end" }}>
-            <LiveChat />
-            <Search />
+        <div style={{ width: "100%", height: "100vh", background: "#e6e6e6", display: "flex", justifyContent: "space-between", padding:"20px" }}>
+           <Globals />
+           <Mainchat />
         </div>
 
     );

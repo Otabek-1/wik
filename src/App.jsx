@@ -13,12 +13,13 @@ const App = () => {
         event.preventDefault();
     
         try {
-            const response = await axios.post("https://wik-backend.onrender.com/login", {
+            const response = await axios.post("http://localhost:4000/login", {
                 uname,
                 password: psw
             });
             if (response.status === 200) {
                 navigate("/dashboard");
+                window.localStorage.setItem("User",JSON.stringify(response.data.user))                
             }
         } catch (err) {
             console.error(err); // Xatolikni konsolga chiqarish
@@ -27,14 +28,14 @@ const App = () => {
     };
 
     return (
-        <div className='login-box' style={{ width: "400px", height: "500px", borderRadius: "20px", position: "relative", display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0px 0px 5px black" }}>
+        <div className='login-box' style={{ width: "400px", height: "500px", borderRadius: "20px", position: "relative", display: "flex", alignItems: "center", justifyContent: "center"}}>
             
-            <span className='login-header-text animated-text' style={{ position: "absolute", top: "-150px", fontFamily: "Roboto", fontSize: "120px", fontWeight: "900" }}>WIK</span>
-            <h3 className="login-text text-light" style={{ position: "absolute", top: "30px", fontSize: "40px" }}>Login</h3>
+            {/* <span className='login-header-text animated-text' style={{ position: "absolute", top: "-150px", fontFamily: "Roboto", fontSize: "120px", fontWeight: "900" }}>WIK</span> */}
+            <h3 className="login-text text-dark" style={{ position: "absolute", top: "30px", fontSize: "40px" }}>Login</h3>
             <form onSubmit={handleSubmit}>
 
                 <div className="uname-input">
-                    <label htmlFor="uname">U-name</label>
+                    <label htmlFor="uname" className=' text-dark'>U-name</label>
                     <input 
                         type="text" 
                         name="uname" 
@@ -47,7 +48,7 @@ const App = () => {
                 </div>
 
                 <div className="uname-input">
-                    <label htmlFor="psw">Password</label>
+                    <label htmlFor="psw" className=' text-dark'>Password</label>
                     <input 
                         type="password" 
                         name="psw" 

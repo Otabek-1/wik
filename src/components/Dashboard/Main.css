@@ -1,0 +1,232 @@
+/* Main chat style */
+.main-chat-box{
+    width: 75%;
+    height: 90vh;
+    background: white;
+    padding: 16px 16px 0px 0px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 0px 15px rgb(183, 179, 179);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    position: relative;
+}
+
+.main-chat-head{
+    width: 102%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid rgb(191, 182, 182);
+    padding: 0px 24px 0px 16px;
+}
+
+.main-chat-head span{
+    color: rgb(149, 141, 141);
+    display: flex;
+    align-items: center;
+    column-gap: 2px;
+}
+.main-chat-body {
+    width: 100%;
+    height: 84%;
+    background: transparent;
+    padding: 20px;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.main-chat-body::-webkit-scrollbar{
+    width: 0;
+}
+
+/* Xabarlar */
+.message {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    row-gap: 5px;
+}
+
+.message span {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* Serverdan kelgan xabarlar chapda */
+.message-from-server {
+    min-width: 100px;
+    border-radius: 10px 10px 10px 0px;
+    background: rgb(234, 233, 233);
+    max-width: 500px;
+    height: max-content;
+    padding: 11px;
+    box-shadow: 0px 0px 5px rgb(178, 175, 175);
+    align-self: flex-start;
+    overflow-wrap: break-word; /* Matnni qatorlarga bo‘lish */
+    word-break: break-all; /* Matnni o‘zidan bo‘lish */
+    white-space: normal; /* Matnni avtomatik ravishda bo‘lib chiqishiga imkon beradi */
+    overflow: hidden; /* Matnni tashqariga chiqishini oldini olish */
+}
+
+/* Foydalanuvchi yozgan xabarlar o‘ngda */
+.message-from-u {
+    min-width: 100px;
+    height: max-content;
+    border-radius: 10px 10px 0px 10px;
+    background: rgb(75, 75, 255);
+    max-width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 0px 0px 5px rgb(178, 175, 175);
+    padding: 11px;
+    color: white;
+    align-self: flex-end;
+    margin-left: auto; /* O‘ng tomonga joylash */
+    overflow-wrap: break-word; /* Matnni qatorlarga bo‘lish */
+    word-break: break-all; /* Matnni o‘zidan bo‘lish */
+    white-space: normal; /* Matnni avtomatik ravishda bo‘lib chiqishiga imkon beradi */
+    overflow: hidden; /* Matnni tashqariga chiqishini oldini olish */
+}
+
+
+.main-chat-send-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    position: absolute;
+    bottom: 0%;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid rgb(214, 209, 209);
+    padding: 0px 25px;
+}
+
+.main-chat-send-box i{
+    position: relative;
+    max-width: 20px;
+    width: 100%;
+    transform: scale(1.3);
+    cursor: pointer;
+}
+
+.main-chat-send-box i input[type="file"]{
+    opacity: 0;
+    width: 100%;
+    position: absolute;
+    left: 0%;
+    cursor: pointer;
+}
+
+.message-input{
+    width: 100%;
+    height: 48px;
+    border: unset;
+    outline: none;
+    overflow-y: scroll;
+}
+
+i{
+    user-select: none;
+}
+
+#text:focus{
+    background: transparent;
+}
+
+.ai-suggestions{
+    width: 95%;
+    height: max-content;
+    position: absolute;
+    background: white;
+    box-shadow: 0px 0px 5px rgb(179, 177, 177);
+    top: -440%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+    /* display: none; */
+}
+
+.ai-suggestion{
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    align-items: center;
+    justify-content: start;
+    border-bottom: 1px solid grey;
+    cursor: pointer;
+}
+
+/* Globals style */
+.global-box{
+    width: 24%;
+    height: 90vh;
+    background: white;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgb(183, 179, 179);
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+}
+
+.users-list{
+    width: 100%;
+    height: 100%;
+    /* background: blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+.user-card{
+    width: 100%;
+    padding: 10px 10px;
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    cursor: pointer;
+    transition: .5s;
+    transform: scale(.9);
+    justify-content: start;
+    transform: translateX(-10px);
+}
+
+.user-card:hover{
+    background: rgb(199, 199, 199);
+}
+
+.user-card-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    background: rgb(159, 158, 158);
+    border-radius: 50%;
+}
+
+.user-card-logo i{
+    transform: scale(1.3);
+}
+
+.user-card-text{
+    display: flex;
+    flex-direction: column;
+}
+
+.user-card-name{
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.user-card-uname{
+    font-size: 15px;
+}

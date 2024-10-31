@@ -61,8 +61,9 @@ form{
     background: none;
     border: unset;
     outline: none;
-    border-bottom: 1px solid white;
-    color:white;
+    border-bottom: 1px solid black;
+    color:black;
+    padding: 5px;
 }
 
 .uname-input input::placeholder{
@@ -70,7 +71,9 @@ form{
 }
 
 .login-box{
-    background: linear-gradient(45deg, purple, blue, black);
+    /* background: linear-gradient(45deg, purple, blue, black); */
+    background: white;
+    box-shadow: 0px 0px 5px rgb(195, 192, 192);
 }
 
 input[type="submit"] {
